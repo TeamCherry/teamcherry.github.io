@@ -1,14 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #ffdb9d;
 }
 #site-container {
     margin: auto;
-    width: 1024px;
+    width: 768px;
     min-height: 100%;
     height: auto;
-    background-color: gray;
+    background-color: white;
+    box-shadow: 0 2px 10px 2px rgba(50, 50, 50, 0.67);
 }
 header {
     width: 100%;
@@ -16,25 +19,86 @@ header {
     overflow: hidden;
     margin: 0;
 }
-#header-logo {
-    height: 200px;
-    transform: scaleX(-1);
-}
-nav {
-    background-color: white;
-}
-nav ul {
-    margin: 0;
+#header-logo ul li {
+    display: inline-block;
     padding: 0;
-    list-style-type: none;
+    margin: 0;
     float: left;
+}
+#header-logo {
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+}
+#main-menu {
+    background-color: #ffdb9d;
+    width: auto;
+}
+#main-menu ul {
+    padding: 0;
+    border: 0;
+    display: block;
+    list-style: none;
+}
+#main-menu ul:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#main-menu ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+#main-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    transition: color 0.25s;
+}
+#main-menu ul li a:hover {
+    color: #333333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+#main-menu ul li a:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: -34px;
+    bottom: 3px;
+    height: 6px;
+    width: 6px;
+    background: #ffffff;
+    opacity: .5;
+}
+#main-menu ul li:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    top: 52px;
+    height: 3px;
+    width: 0%;
+    background-color: #333333;
+    transition: width .25s;
+}
+#main-menu ul li:hover:before {
     width: 100%;
 }
-nav ul li a {
-    float: left;
-    width: 150px;
-    background-color: white;
-    display: inline-block;
-    text-align: center;
-    padding: 5px;
+#main-menu ul li:last-child > a:after {
+    display: none;
+}
+#main-menu .active-link:before {
+    width: 100%;
+}
+#main-menu .active-link a {
+    color: #333333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
