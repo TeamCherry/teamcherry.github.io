@@ -1,3 +1,11 @@
+@font-face {
+    font-family: OpenSansBold;
+    src: url(OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(OpenSans-Regular.ttf);
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -11,6 +19,7 @@ html, body {
     height: auto;
     background-color: white;
     box-shadow: 0 2px 10px 2px rgba(50, 50, 50, 0.67);
+    font-family: OpenSans;
 }
 header {
     width: 100%;
@@ -58,7 +67,7 @@ header {
     display: block;
     padding: 15px 30px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    font-family: "Open Sans", sans-serif;
+    font-family: OpenSansBold, sans-serif;
     position: relative;
     transition: color 0.25s;
 }
