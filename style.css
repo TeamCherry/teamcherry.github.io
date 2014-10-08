@@ -47,6 +47,7 @@ header {
     border: 0;
     display: block;
     list-style: none;
+    text-align: center;
 }
 #main-menu ul:after {
     content: " ";
@@ -65,7 +66,7 @@ header {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 15px 30px;
+    padding: 12px 30px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     font-family: OpenSansBold, sans-serif;
     position: relative;
@@ -75,23 +76,13 @@ header {
     color: #333333;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
-#main-menu ul li a:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    right: -34px;
-    bottom: 3px;
-    height: 6px;
-    width: 6px;
-    background: #ffffff;
-    opacity: .5;
-}
+
 #main-menu ul li:before {
     content: "";
     display: block;
     position: relative;
     left: 0;
-    top: 52px;
+    top: 49px;
     height: 3px;
     width: 0%;
     background-color: #333333;
@@ -99,9 +90,6 @@ header {
 }
 #main-menu ul li:hover:before {
     width: 100%;
-}
-#main-menu ul li:last-child > a:after {
-    display: none;
 }
 #main-menu .active-link:before {
     width: 100%;
