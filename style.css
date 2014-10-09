@@ -44,10 +44,12 @@ header {
     width: 550px;
     height: 150px;
 }
+
 #main-menu {
     box-shadow: 0 1px 13px 0 rgba(100, 100, 100, 0.25);
     background-color: #B0E2BC;
     width: auto;
+    position: relative;
 }
 #main-menu ul {
     padding: 0;
@@ -55,6 +57,26 @@ header {
     display: block;
     list-style: none;
     text-align: center;
+}
+/*hides the sub-menus*/
+#main-menu ul ul {
+    display: none;
+}
+/*displays the sub-menus upon pointer hover*/
+#main-menu ul li:hover > ul {
+    display: block;
+    background-color: lightgray;
+}
+/*makes the menu horizontal*/
+#main-menu ul li{
+    float: left;
+}
+/*position of the sub-menus*/
+#main-menu ul  ul {
+    position: absolute; left: 0;top:100%;
+}
+#main-menu ul ul ul {
+    position: absolute; left: 100%; top:0;
 }
 #main-menu ul:after {
     content: " ";
@@ -65,7 +87,7 @@ header {
     visibility: hidden;
 }
 #main-menu ul li {
-    display: inline-block;
+    float: left;
     padding: 0;
     margin: 0;
 }
@@ -89,11 +111,11 @@ header {
     display: block;
     position: relative;
     left: 0;
-    top: 49px;
+    bottom: 0;
     height: 3px;
-    width: 0%;
-    background-color: #333333;
-    transition: width .25s;
+    width: 0;
+    background-color: black;
+    transition: width .22s;
 }
 #main-menu ul li:hover:before {
     width: 100%;
@@ -104,6 +126,11 @@ header {
 #main-menu .active-link a {
     color: #333333;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+#main-menu, #main-menu ul, #main-menu ul li, #main-menu ul li a  {
+    border: none;
+    list-style: none outside none;
+    position: relative;
 }
 #site-footer {
     width: 768px;
@@ -148,4 +175,30 @@ header {
 }
 #container-bottom-padding {
     height: 25px;
+}
+/*arrows that indicate a sub-menu. They are rotated according to the positioning of the sub-menu*/
+#main-menu > ul > li.has-sub >a, #main-menu >ul > li.has-sub >ul > li.has-sub > a  {
+    padding-right: 25px;
+}
+#main-menu > ul > li.has-sub > a:after {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    content: "";
+    height: 4px;
+    position: absolute;
+    right: 10px;
+    top: 21px;
+    transform: rotate(45deg);
+    width: 4px;
+}
+#main-menu >ul > li.has-sub >ul > li.has-sub > a:after {
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    content: "";
+    height: 4px;
+    position: absolute;
+    right: 10px;
+    top: 21px;
+    transform: rotate(315deg);
+    width: 4px;
 }
