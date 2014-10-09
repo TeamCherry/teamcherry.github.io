@@ -60,12 +60,16 @@ header {
 }
 /*hides the sub-menus*/
 #main-menu ul ul {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     width: auto;
+    transition: opacity .25s ease-in-out;
 }
 /*displays the sub-menus upon pointer hover*/
 #main-menu ul li:hover > ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
     background-color: lightgray;
 }
 #main-menu ul li > ul li {
@@ -74,7 +78,7 @@ header {
 /*
 for different li colors .. Dulev
 #main-menu ul li > ul li:nth-child(even) {
-    background-color: #000000;
+    background-color: #333333;
 }
 */
 /*makes the menu horizontal*/
@@ -124,10 +128,10 @@ for different li colors .. Dulev
     bottom: -49px;
     height: 3px;
     width: 0;
-    background-color: black;
+    background-color: #333333;
     transition: width .25s;
 }
-#main-menu ul li:before, #main-menu ul ul li:before{
+#main-menu ul ul li:before, #main-menu ul li.has-sub:before{
     bottom: 0;
 }
 #main-menu ul li:hover:before {
@@ -202,8 +206,8 @@ for different li colors .. Dulev
     width: 4px;
 }
 #main-menu >ul > li.has-sub >ul > li.has-sub > a:after {
-    border-bottom: 2px solid #000000;
-    border-right: 2px solid #000000;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
     content: "";
     height: 4px;
     position: absolute;
