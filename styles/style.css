@@ -61,18 +61,28 @@ header {
 /*hides the sub-menus*/
 #main-menu ul ul {
     display: none;
+    width: auto;
 }
 /*displays the sub-menus upon pointer hover*/
 #main-menu ul li:hover > ul {
     display: block;
     background-color: lightgray;
 }
+#main-menu ul li > ul li {
+    font-size: 14px;
+}
+/*
+for different li colors .. Dulev
+#main-menu ul li > ul li:nth-child(even) {
+    background-color: #000000;
+}
+*/
 /*makes the menu horizontal*/
 #main-menu ul li{
     float: left;
 }
 /*position of the sub-menus*/
-#main-menu ul  ul {
+#main-menu ul ul {
     position: absolute; left: 0;top:100%;
 }
 #main-menu ul ul ul {
@@ -111,11 +121,14 @@ header {
     display: block;
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: -49px;
     height: 3px;
     width: 0;
     background-color: black;
-    transition: width .22s;
+    transition: width .25s;
+}
+#main-menu ul li:before, #main-menu ul ul li:before{
+    bottom: 0;
 }
 #main-menu ul li:hover:before {
     width: 100%;
@@ -177,9 +190,6 @@ header {
     height: 25px;
 }
 /*arrows that indicate a sub-menu. They are rotated according to the positioning of the sub-menu*/
-#main-menu > ul > li.has-sub >a, #main-menu >ul > li.has-sub >ul > li.has-sub > a  {
-    padding-right: 25px;
-}
 #main-menu > ul > li.has-sub > a:after {
     border-bottom: 2px solid white;
     border-right: 2px solid white;
