@@ -1,17 +1,17 @@
 @font-face {
     font-family: OpenSansBold;
-    src: url(OpenSans-Bold.ttf);
+    src: url('../fonts/OpenSans-Bold.ttf');
 }
 @font-face {
     font-family: OpenSans;
-    src: url(OpenSans-Regular.ttf);
+    src: url('../fonts/OpenSans-Regular.ttf');
 }
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     background-color: #8EDFB2;
-    background-image: url("pattern.png");
+    background-image: url('../images/pattern.png');
     font-family: OpenSans, sans-serif;
 }
 a {
@@ -151,8 +151,8 @@ header {
 #welcome-section {
     width: auto;
     margin-top: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 #welcome-section h1 {
     text-align: center;
