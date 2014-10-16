@@ -221,27 +221,26 @@ for different li colors .. Dulev
 .smart-green {
     margin-left:auto;
     margin-right:auto;
+    margin-top: 40px;
 
     max-width: 500px;
     background: #ffffff;
     padding: 30px 30px 20px 30px;
-    font: 12px Arial, Helvetica, sans-serif;
+    font: 12px OpenSans, sans-serif;
     color: #666;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 }
 .smart-green h1 {
-    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
-    padding: 10px 0px 10px 40px;
+    font: 24px OpenSans, sans-serif;
+    padding: 10px 0 10px 40px;
     display: block;
     margin: -30px -30px 10px -30px;
     color: #FFF;
     background: #b0e2bc;
     text-shadow: 1px 1px 1px #949494;
-    border-radius: 5px 5px 0px 0px;
-    -webkit-border-radius: 5px 5px 0px 0px;
-    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0 0;
     border-bottom:1px solid #8EDFB2;
 
 }
@@ -253,7 +252,7 @@ for different li colors .. Dulev
 
 .smart-green label {
     display: block;
-    margin: 0px -30px 5px;
+    margin: 0 -30px 5px;
 }
 .smart-green label>span {
     float: left;
@@ -263,27 +262,24 @@ for different li colors .. Dulev
 .smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green select {
     color: #555;
     height: 30px;
+    font: normal 14px/14px OpenSans, sans-serif;
     line-height:15px;
     width: 98%;
-    padding: 0px 0px 0px 10px;
+    padding: 0 0 0 10px;
     margin-top: 2px;
     border: 1px solid #E5E5E5;
     background: #ffffff;
     outline: 0;
-    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
     box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
-    font: normal 14px/14px Arial, Helvetica, sans-serif;
 }
 .smart-green textarea{
     height:100px;
     padding-top: 10px;
 }
 .smart-green select {
-    background: url('down-arrow.png') no-repeat right, -moz-linear-gradient(top, #FBFBFB 0%, #E9E9E9 100%);
-    background: url('down-arrow.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#E9E9E9));
-   appearance:none;
+    appearance:none;
     -webkit-appearance:none; 
-   -moz-appearance: none;
+    -moz-appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
     width:100%;
@@ -301,4 +297,38 @@ for different li colors .. Dulev
 }
 .smart-green .button:hover {
     background-color:#8edfb2;
+}
+/* About us person info boxes */
+#person-info-box {
+    width: 660px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+#person-info-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#person-info-box h2 {
+    font-size: 20px;
+    margin: 0;
+}
+#person-info-box p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.person-info {
+    width: 640px;
+    padding: 10px;
+    min-height: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px 2px rgba(50, 50, 50, 0.2);
+}
+.person-info img {
+    margin-right: 10px;
+    width: 120px;
+    height: 120px;
+    float: left;
 }
