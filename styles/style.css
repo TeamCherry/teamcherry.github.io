@@ -170,6 +170,7 @@ for different li colors .. Dulev
     margin-top: 30px;
     margin-left: 40px;
     margin-right: 40px;
+    text-align: center;
 }
 #welcome-section h1 {
     text-align: center;
@@ -338,4 +339,12 @@ article{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+#remember-home{
+    padding-bottom: 20px;
+}
+#warning-message-home, #remember-home{
+    font-style: italic;
+    font-weight: bold;
+    color: #FF0000;
 }
